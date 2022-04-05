@@ -1,4 +1,4 @@
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AboutPage from "../../features/about/AboutPage";
@@ -30,13 +30,17 @@ function App() {
     <ThemeProvider theme={them}>
       <CssBaseline />
       <Header darkMode={darkMode} handleThemChange={handleThemChange} />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/:id" element={<ProductDetails />} />
-        <Route path="/contactPage" element={<ContactPage />} />
-        <Route path="/aboutPage" element={<AboutPage />} />
-      </Routes>
+     
+
+      <Container>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/catalog/:id" element={<ProductDetails />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </Container>
     </ThemeProvider>
   );
 }

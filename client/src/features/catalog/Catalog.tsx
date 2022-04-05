@@ -16,9 +16,7 @@ export default function Catalog() {
     
     return (
         <>
-            <Container>
-                <ProductList products={products} />
-            </Container>
+            <ProductList products={products} />
         </>
     );
 }
